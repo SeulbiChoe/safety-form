@@ -7,24 +7,24 @@
 a { text-decoration: none; }
 img { width: 100%; object-fit: contain; }
 p{margin: 0 !important;}
+label{margin: 0 !important;}
 /* ════════════════════════════════
   화면 레이아웃
 ════════════════════════════════ */
 body { background-color: #f0f4f8 !important; color: #000; }
 #wrapper { padding: 40px; }
-.form_card {
-  width: 700px; margin: 0 auto;
-  background: #fff; border-radius: 12px;
-  padding: 32px 36px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-.form_card h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; color: #111; }
-.form_card .sub { font-size: 13px; color: #888; margin-bottom: 28px; }
-.section_title {
-  font-size: 1rem; font-weight: 700; color: #1b1bad;
-  margin: 28px 0 16px; border-left: 3px solid #1b1bad; padding-left: 8px;
-}
-.section_sub { font-size: 0.9rem; font-weight: 600; color: #444; margin: 20px 0 12px; }
+/* ════════════════════════════════
+  웹 입력폼
+════════════════════════════════ */
+.form_card {width: 700px; margin: 0 auto;background: #fff; border-radius: 12px;padding: 32px 36px;box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+.form_card h1 {font-size: 2rem; font-weight: 700; margin-bottom: 6px; color: #111;}
+.form_card .sub {color: #888; margin-bottom: 28px;}
+.section_title {font-weight: 700; color: #1b1bad;margin: 28px 0 16px; border-left: 3px solid #1b1bad; padding-left: 8px;}
+.section_sub {font-weight: 600; color: #444; margin: 20px 0 12px;}
+.page_num_wrap {display: flex; align-items: center; gap: 6px; margin: 10px 0 28px; font-size: 13px; color: #888;}
+.page_num_wrap label { font-size: 13px; color: #888; }
+.page_num_wrap input { width: 40px; border: 1px solid #dde3ea; border-radius: 7px; padding: 4px 8px; background-color: #e8f4fd; font-size: 13px; text-align: center; outline: none;color: #111;}
+
 .form_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
 .form_grid.col3 { grid-template-columns: repeat(3, 1fr); }
 .field { display: flex; flex-direction: column; gap: 5px; }
@@ -51,35 +51,15 @@ body { background-color: #f0f4f8 !important; color: #000; }
   display: flex; justify-content: flex-end; gap: 10px;
   padding: 16px 0 40px;
 }
-.prev_btn { display: inline-block; padding: 9px 18px; border-radius: 6px; background: #888; color: #fff; cursor: not-allowed; font-size: 14px; }
+.prev_btn { display: inline-block; padding: 9px 18px; border-radius: 6px; background: #888; color: #fff;font-size: 14px; }
 .print_btn { display: inline-block; padding: 9px 18px; border-radius: 6px; background: #2e7d32; color: #fff; border: none; cursor: pointer; font-size: 14px; }
 .next_btn  { display: inline-block; padding: 9px 18px; border-radius: 6px; background: #1b1bad; color: #fff; border: none; cursor: pointer; font-size: 14px; }
 footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
 
-/* 프린트 페이지 — 화면에서 숨김 */
-/* .print_page { display: none; } */
 
 /* ════════════════════════════════
-   프린트 전용 스타일 (기존 PDF 양식 재현)
+  프린트 페이지
 ════════════════════════════════ */
-@media print {
-  @page { size: A4 portrait; margin: 0; }
-  body { background-color: #fff !important; }
-  html, body {
-    /* width: 210mm !important; */
-    width: 100% !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  #wrapper{padding: 0;}
-  /* 화면 전용 요소 숨기기 */
-  .form_card, .btn_wrap, footer { display: none !important; }
-  /* 프린트 페이지 표시 */
-  .print_page { display: block !important; }
-  textarea{background-color: transparent !important;}
-}
-
-/* 페이지 */
 .page {
   width: 21cm; height: 29.7cm;
   padding: 1.5cm 1.5cm 2cm 1.5cm;
@@ -110,9 +90,7 @@ footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
   background: transparent !important; border: none;
 }
 .page_num span { padding: 0 3px; font-size: 1.2rem; }
-.page_num_wrap { display: flex; align-items: center; gap: 6px; margin-bottom: 28px; font-size: 13px; color: #888; }
-.page_num_wrap label { font-size: 13px; color: #888; }
-.page_num_wrap input { width: 40px; border: 1px solid #dde3ea; border-radius: 7px; padding: 4px 8px; background-color: #e8f4fd; font-size: 13px; text-align: center; outline: none; }
+
 /* 타이틀 */
 .title { font-size: 1.5rem; padding-left: 3px; color: #000; }
 .title--lv1 { font-weight: 800; }
@@ -153,3 +131,45 @@ input, textarea {
 .page_1 table.scale th { padding: 15px 0; background-color: #f2f2f2 !important; }
 .page_1 table.scale td { padding: 15px 5px; }
 .page_1 table.scale td input { text-align: center; }
+
+/* page 02 */
+.page_2 .table_wrap table { text-align: center; }
+.page_2 table thead th { padding: 6px 0; text-align: center; font-weight: 800; }
+.page_2 table li { list-style: disc; }
+.page_2 .table_wrap table td { padding: 5px; }
+.page_2 .table_wrap table td:last-child { text-align: left; padding: 25px 10px 25px 0; }
+.page_2 .table_wrap table ul { padding-left: 25px; word-break: keep-all; }
+.page_2 .table_wrap table td span { padding: 0 0 8px 6px; display: block; }
+
+/* 화면용 테이블도 같은 스타일 적용 */
+.page_2_table { text-align: center; }
+.page_2_table thead th { padding: 6px 0; text-align: center; font-weight: 800; }
+.page_2_table li { list-style: disc; }
+.page_2_table td { padding: 5px; vertical-align: middle; }
+.page_2_table td:last-child { text-align: left; padding: 25px 10px 25px 0; }
+.page_2_table ul { padding-left: 25px; word-break: keep-all; }
+.page_2_table td span { padding: 0 0 8px 6px; display: block; }
+
+
+/* 프린트 페이지 — 화면에서 숨김 */
+/* .print_page { display: none; } */
+
+/* ════════════════════════════════
+   프린트 전용 스타일 (기존 PDF 양식 재현)
+════════════════════════════════ */
+@media print {
+  @page { size: A4 portrait; margin: 0; }
+  body { background-color: #fff !important; }
+  html, body {
+    /* width: 210mm !important; */
+    width: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  #wrapper{padding: 0;}
+  /* 화면 전용 요소 숨기기 */
+  .form_card, .btn_wrap, footer { display: none !important; }
+  /* 프린트 페이지 표시 */
+  .print_page { display: block !important; }
+  textarea{background-color: transparent !important;}
+}

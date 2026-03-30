@@ -98,7 +98,7 @@
   <div class="btn_wrap">
     <a class="prev_btn">이전</a>
     <button class="print_btn" onclick="window.print()">프린트</button>
-    <button class="next_btn" id="nextBtn">저장 후 다음</button>
+    <button class="next_btn" id="nextBtn" onclick="location.href='./page02.html'">저장 후 다음</button>
   </div>
 
   <!-- ── 프린트 전용 페이지 (화면에서 숨김) ── -->
@@ -115,9 +115,9 @@
         <p>Revision No : 4</p>
         <div class="page_num">
           페이지번호 :
-          <input type="text" id="s_page_print" readonly>
+          <input type="text" id="s_page_print" value="1" readonly>
           <span>of</span>
-          <input type="text" id="e_page_print" readonly>
+          <input type="text" id="e_page_print" value="92" readonly>
         </div>
       </div>
     </header>
@@ -130,7 +130,7 @@
           <tr>
             <th style="width:130px;">사업자 명칭</th>
             <td><input type="text" id="p_bname" readonly></td>
-            <th style="width:160px;">업체명</th>6262
+            <th style="width:160px;">업체명</th>
             <td><input type="text" id="p_c_name" readonly></td>
           </tr>
           <tr>

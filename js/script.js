@@ -42,3 +42,7 @@ const textareas = document.querySelectorAll('textarea');
 textareas.forEach(ta => {
   ta.addEventListener('input', () => autoResize(ta));
 });
+
+// 화면용 → 프린트로 그냥 복사
+document.querySelector('.print_page .table_wrap').innerHTML = 
+  document.querySelector('.form_card .table_wrap').innerHTML;
