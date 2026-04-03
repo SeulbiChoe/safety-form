@@ -17,6 +17,7 @@ body { background-color: #f0f4f8 !important; color: #000; }
   웹 입력폼
 ════════════════════════════════ */
 .form_card {width: 700px; margin: 0 auto;background: #fff; border-radius: 12px;padding: 32px 36px;box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+.form_card .table_wrap{margin-top: 20px;}
 .form_card h1 {font-size: 2rem; font-weight: 700; margin-bottom: 6px; color: #111;}
 .form_card .sub {color: #888; margin-bottom: 28px;}
 .section_title {font-weight: 700; color: #1b1bad;margin: 28px 0 16px; border-left: 3px solid #1b1bad; padding-left: 8px;}

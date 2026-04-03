@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>안전보건관리계획서 - page 03</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+ <div id="wrapper">
+  <!-- ── 화면용 입력 폼 ── -->
+  <div class="form_card page_2">
+       <h1>안전보건관리계획서</h1>
+    <p class="sub">표준번호: MXI-S-계획서 &nbsp;|&nbsp; Revision No : 4</p>
+    <div class="page_num_wrap">
+      <label>페이지번호</label>
+      <input type="text" id="s_page" value="3">
+      <span>of</span>
+      <input type="text" id="e_page" value="92">
+    </div>
+
+    <div class="section_title">4. 안전보건조직</div>
+    <div class="section_sub">1) 본사(중대재해처벌법 전담조직)</div>
+    <!-- 입력 필드 -->
+    <div class="form_grid">
+      <div class="field">
+        <label>안전보건관리책임자 직위</label>
+        <input type="text" id="safety_b_p" placeholder="관리소장 또는 해당없음">
+      </div>
+      <div class="field">
+        <label>안전보건관리책임자 성명</label>
+        <input type="text" id="safety_b_name" placeholder="이름 입력">
+      </div>
+      <div class="field">
+        <label>안전보건관리담당 직위</label>
+        <input type="text" id="manage_p" placeholder="직위 입력">
+      </div>
+      <div class="field">
+        <label>안전보건관리담당 성명</label>
+        <input type="text" id="manage_name" placeholder="이름 입력">
+      </div>
+    </div>
+    <div class="table_wrap">
+        <table class="talbe table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 150px;">구분</th>
+                <th style="width: 120px;">직위</th>
+                <th style="width: 100px;">성명</th>
+                <th>주요 업무 내용</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>안전보건관리책임자</td>
+                <td>&lt;사업소&gt; <br> <input type="text" id="p_safety_b_p" readonly></td>
+                <td>&lt;사업소&gt; <br> <input type="text" id="p_safety_b_name" readonly></td>
+                <td>
+                    <span>사업소 안전보건 총괄 관리</span>
+                    <ul>
+                        <li>산업재해예방계획 수립</li>
+                        <li>안전보건관리규정 작성 및 변경</li>
+                        <li>안전보건교육</li>
+                        <li>작업환경 점검 및 개선</li>
+                        <li>근로자 건강관리</li>
+                        <li>산업재해 원인조사 및 재발방지대책 수립</li>
+                        <li>산업재해 통계 기록 및 유지</li>
+                        <li>안전장치 및 보호구 적격품 확인</li>
+                        <li>근로자 유해ㆍ위험방지 조치</li>
+                        <li>위험성평가</li>
+                        <li>작업의 중지</li>
+                        <li>도급 시 산업재해 예방 조치</li>
+                        <li>산업안전보건관리비 사용 협의ㆍ조정ㆍ집행</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>안전보건관리담당</td>
+                <td>&lt;본사&gt; <br> <input type="text" id="p_manage_p" readonly></td>
+                <td>&lt;본사&gt; <br> <input type="text" id="p_manage_name" readonly></td>
+                <td>
+                    <span>안전보건 업무 수행</span>
+                    <ul>
+                        <li>지휘ㆍ감독하는 작업과 관련된 기계ㆍ기구ㆍ설비 등의 안전ㆍ보건 점검 및 이상유무 확인</li>
+                        <li>소속 근로자 작업복ㆍ보호구 및 방호장치 점검과 착용ㆍ사용에 관한 교육ㆍ지도</li>
+                        <li>산업재해 보고 및 응급조치</li>
+                        <li>작업장 정리정돈 및 통로확보 확인ㆍ감독</li>
+                        <li>안전보건관계자의 지도ㆍ조언에 대한 협조</li>
+                        <li>위험성평가 시 유해위험요인 파악 및 개선조치 시행</li>
+                        <li>유해ㆍ위험방지 업무</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+    <div class="btn_wrap">
+        <a class="prev_btn" href="./page01.html">이전</a>
+        <button class="print_btn" onclick="window.print()">프린트</button>
+        <button class="next_btn" id="nextBtn" onclick="location.href='./page02.html'">저장 후 다음</button>
+    </div>
+
+<!-- ── 프린트 전용 페이지 (화면에서 숨김) ── -->
+  <section class="print_page page page_2">
+    <header class="page_header page_header--type1">
+      <div class="page_header__logo">
+        <img src="./img/maxerve_logo.png" alt="맥서브 로고">
+      </div>
+      <div class="page_header__title">
+        <h1>안전보건관리계획서</h1>
+      </div>
+      <div class="page_header__desc">
+        <p>표준번호: MXI-S-계획서</p>
+        <p>Revision No : 4</p>
+        <div class="page_num">
+          페이지번호 :
+          <input type="text" id="s_page_print" value="3" readonly>
+          <span>of</span>
+          <input type="text" id="e_page_print" value="92" readonly>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="title title--lv1">4. 안전보건조직</h2>
+    <h3 class="title title--lv2">1&#41; 본사(중대재해처벌법 전담조직)</h3>
+    <div class="table_wrap"></div>
+  </section>
+ </div>
+ <footer>
+  <div>Copyright &copy; 2019 - 2024 Maxerve Corp. All rights reserved</div>
+ </footer>
+ <script src="./js/script.js"></script>
+</body>
+</html>

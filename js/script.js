@@ -18,6 +18,10 @@ const syncMap = [
   ['note',         'p_note'],
   ['s_page', 's_page_print'],
   ['e_page', 'e_page_print'],
+  ['safety_b_p',    'p_safety_b_p'],
+  ['safety_b_name', 'p_safety_b_name'],
+  ['manage_p',      'p_manage_p'],
+  ['manage_name',   'p_manage_name'],
 ];
 syncMap.forEach(([from, to]) => {
   const src = document.getElementById(from);
